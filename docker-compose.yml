@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  deephub-maintenance:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: deephubai-maintenance-app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV=production

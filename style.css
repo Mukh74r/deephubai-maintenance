@@ -1,0 +1,234 @@
+/* ========================================================
+   DeepHub AI - Maintenance Page
+   Clean, Modern Vanilla CSS
+   ======================================================== */
+
+:root {
+  --bg-color: #0b0f19;
+  --card-bg: #121826;
+  --card-border: #1f293d;
+  --panel-bg: #0d121e;
+  --panel-border: #1a2233;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-light: #818cf8;
+  --amber: #f59e0b;
+  --amber-bg: rgba(245, 158, 11, 0.1);
+  --amber-border: rgba(245, 158, 11, 0.25);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--card-border);
+  background-color: rgba(11, 15, 25, 0.95);
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.brand-name span {
+  color: var(--primary-light);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background-color: var(--amber-bg);
+  border: 1px solid var(--amber-border);
+  color: var(--amber);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--amber);
+  box-shadow: 0 0 6px var(--amber);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.25rem;
+}
+
+.maintenance-card {
+  width: 100%;
+  max-width: 620px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 2.75rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 9999px;
+  background-color: rgba(79, 70, 229, 0.12);
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  color: var(--primary-light);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Status Panel */
+.status-panel {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  font-size: 0.85rem;
+}
+
+.status-row:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.status-label {
+  color: var(--text-muted);
+}
+
+.status-value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.status-active {
+  color: var(--amber);
+  font-weight: 600;
+}
+
+/* Support Section */
+.support-section {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.support-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+}
+
+.support-button {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.support-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.support-button:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+.site-footer {
+  padding: 1.25rem 2rem;
+  border-top: 1px solid var(--card-border);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background-color: rgba(11, 15, 25, 0.95);
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .site-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .maintenance-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+}
